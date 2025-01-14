@@ -1,111 +1,246 @@
 /*
  * Reset body styles
+ * Removes default margins/padding and ensures the page can scroll vertically if needed.
  */
  body {
   margin: 0;
   padding: 0;
   overflow: auto;
+  background-color: #1C1F4F; /* Cosmic blue background color */
 }
 
-/* Sky Map Section */
+/* 
+ * Sky Map Section 
+ * This styles the sky map container to make it a relative positioning context for child elements.
+ */
 #sky-map {
-  position: relative;
-  width: 100%;
-  height: auto;
+  position: relative; /* Sets the parent element as a reference point for absolute child elements. */
+  width: 100%; /* Makes the container take up the full width of the screen. */
+  height: auto; /* Keeps the height proportional to the image’s natural dimensions. */
+  overflow: hidden; /* Hides any content that overflows the container. */
 }
 
+/* 
+ * Sky Map Image 
+ * Ensures the sky map image is responsive and scales properly within its container.
+ */
 #sky-map img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100%; /* Makes the image take up the full width of the parent container. */
+  height: auto; /* Keeps the image's aspect ratio intact. */
+  display: block; /* Removes any extra space below the image caused by inline elements. */
 }
 
-/* Reset body styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #1C1F4F;
-  color: #ffffff;
-}
-
-/* Header styles */
+/* 
+ * Header Styles 
+ * Styles the header section, including the background color, padding, and text alignment.
+ */
 header {
-  background-color: #333;
-  padding: 20px;
-  text-align: center;
+  background-color: #333; /* Dark background color for the header. */
+  padding: 20px; /* Adds space inside the header for a better layout. */
+  text-align: center; /* Centers the text inside the header. */
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2rem;
+  margin: 0; /* Removes default margins from the heading. */
+  font-size: 2rem; /* Sets the font size to 2 rem units (relative to the root font size). */
 }
 
+/* 
+ * Navigation Styles 
+ * Styles the navigation menu inside the header.
+ */
 nav ul {
-  list-style: none;
-  padding: 0;
+  list-style: none; /* Removes bullet points from the list. */
+  padding: 0; /* Removes default padding from the list. */
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 10px;
+  display: inline; /* Makes the list items appear side-by-side. */
+  margin: 0 10px; /* Adds horizontal spacing between list items. */
 }
 
 nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
+  color: #ffffff; /* Sets the text color to white. */
+  text-decoration: none; /* Removes the underline from the links. */
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Adds an underline when the link is hovered. */
 }
 
-/* Intro section */
+/* 
+ * Intro Section 
+ * Styles the introductory content area.
+ */
 .intro {
-  padding: 40px;
-  text-align: center;
-  background-color: #444;
+  padding: 40px; /* Adds padding around the text for spacing. */
+  text-align: center; /* Centers the text inside the section. */
+  background-color: #444; /* Dark gray background color. */
 }
 
 .intro h2 {
-  font-size: 1.8rem;
+  font-size: 1.8rem; /* Sets the font size of the heading. */
 }
 
 .intro p {
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* Sets the font size of the paragraph. */
 }
 
-/* Content section */
+/* 
+ * Content Section 
+ * Styles the main content area.
+ */
 .content {
-  padding: 40px;
-  text-align: center;
-
-  background-color: #555;
+  padding: 40px; /* Adds padding inside the section for spacing. */
+  text-align: center; /* Centers the text inside the section. */
+  background-color: #555; /* Medium gray background color. */
 }
 
 .content h3 {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Sets the font size of the subheading. */
 }
 
 .content p {
+  font-size: 1rem; /* Sets the font size of the paragraph. */
+}
+
+/* 
+ * Footer Styles 
+ * Styles the footer section at the bottom of the page.
+ */
+footer {
+  text-align: center; /* Centers the text inside the footer. */
+  padding: 20px; /* Adds padding inside the footer. */
+  position: relative; /* Allows absolutely positioned elements inside the footer to be positioned relative to it. */
+}
+
+/* 
+ * Footer Image 
+ * Ensures the footer image scales properly and doesn’t cause unwanted scrolling.
+ */
+.footer-image {
+  width: 70%; /* Sets the width of the image to 70% of the parent container. */
+  height: 500%; /* Extends the height significantly to cover the footer area. */
+  max-height: 800px; /* Limits the maximum height to 800px to prevent excessive scrolling. */
+  object-fit: cover; /* Ensures the image covers the entire area without stretching. */
+  display: block; /* Removes any extra space below the image. */
+  margin: 0 auto; /* Centers the image horizontally. */
+}
+
+/* 
+ * Betelgeuse Star 
+ * Styles the clickable point for the Betelgeuse star.
+ */
+.star-betelgeuse {
+  margin: 0; /* Removes default margins. */
+  padding: 0; /* Removes default padding. */
+  position: absolute; /* Positions the star relative to the #sky-map container. */
+  top: 19.75%; /* Sets the vertical position of the star. */
+  left: 13.2%; /* Sets the horizontal position of the star. */
+  width: 20px; /* Sets the width of the clickable area. */
+  height: 20px; /* Sets the height of the clickable area. */
+  border-radius: 50%; /* Makes the clickable area a perfect circle. */
+  cursor: pointer; /* Changes the mouse pointer to a hand when hovering over the star. */
+  background-color: transparent; /* Makes the clickable area invisible. */
+  border: 2px solid transparent; /* Adds an invisible border for the hover effect. */
+  transition: all 0.3s ease; /* Smoothly transitions hover effects. */
+}
+
+/* 
+ * Rigel Star 
+ * Styles the clickable point for the Rigel star.
+ */
+.star-rigel {
+  margin: 0; /* Removes default margins. */
+  padding: 0; /* Removes default padding. */
+  position: absolute; /* Positions the star relative to the #sky-map container. */
+  top: 79.95%; /* Sets the vertical position of the star. */
+  left: 73.1%; /* Sets the horizontal position of the star. */
+  width: 20px; /* Sets the width of the clickable area. */
+  height: 20px; /* Sets the height of the clickable area. */
+  border-radius: 50%; /* Makes the clickable area a perfect circle. */
+  cursor: pointer; /* Changes the mouse pointer to a hand when hovering over the star. */
+  background-color: transparent; /* Makes the clickable area invisible. */
+  border: 2px solid transparent; /* Adds an invisible border for the hover effect. */
+  transition: all 0.3s ease; /* Smoothly transitions hover effects. */
+}
+
+.star-alnitak {
+  margin: 0; /* Removes default margins. */
+  padding: 0; /* Removes default padding. */
+  position: absolute; /* Positions the star relative to the #sky-map container. */
+  top: 55.8%; /* Sets the vertical position of the star. */
+  left: 34.9%; /* Sets the horizontal position of the star. */
+  width: 20px; /* Sets the width of the clickable area. */
+  height: 20px; /* Sets the height of the clickable area. */
+  border-radius: 50%; /* Makes the clickable area a perfect circle. */
+  cursor: pointer; /* Changes the mouse pointer to a hand when hovering over the star. */
+  background-color: transparent; /* Makes the clickable area invisible. */
+  border: 2px solid transparent; /* Adds an invisible border for the hover effect. */
+  transition: all 0.3s ease; /* Smoothly transitions hover effects. */
+}
+
+.star-alnilam {
+  margin: 0; /* Removes default margins. */
+  padding: 0; /* Removes default padding. */
+  position: absolute; /* Positions the star relative to the #sky-map container. */
+  top: 53.12%; /* Sets the vertical position of the star. */
+  left: 41.8%; /* Sets the horizontal position of the star. */
+  width: 20px; /* Sets the width of the clickable area. */
+  height: 20px; /* Sets the height of the clickable area. */
+  border-radius: 50%; /* Makes the clickable area a perfect circle. */
+  cursor: pointer; /* Changes the mouse pointer to a hand when hovering over the star. */
+  background-color: transparent; /* Makes the clickable area invisible. */
+  border: 2px solid transparent; /* Adds an invisible border for the hover effect. */
+  transition: all 0.3s ease; /* Smoothly transitions hover effects. */
+}
+
+.star-mintaka {
+  margin: 0; /* Removes default margins. */
+  padding: 0; /* Removes default padding. */
+  position: absolute; /* Positions the star relative to the #sky-map container. */
+  top: 49.7%; /* Adjust this to plot accurately */
+  left: 47.8%; /* Adjust this to plot accurately */
+  width: 20px; /* Sets the width of the clickable area. */
+  height: 20px; /* Sets the height of the clickable area. */
+  border-radius: 50%; /* Makes the clickable area a perfect circle. */
+  cursor: pointer; /* Changes the mouse pointer to a hand when hovering over the star. */
+  background-color: transparent; /* Makes the clickable area invisible. */
+  border: 2px solid transparent; /* Adds an invisible border for the hover effect. */
+  transition: all 0.3s ease; /* Smoothly transitions hover effects. */
+}
+
+
+/* 
+ * Hover Effect for Betelgeuse and Rigel 
+ * Adds a glowing effect when hovering over the clickable stars.
+ */
+.star-betelgeuse:hover,
+.star-rigel:hover,
+.star-alnitak:hover,
+.star-alnilam:hover,
+.star-mintaka:hover {
+  border-color: rgba(255, 255, 255, 0.7); /* Changes the border color to a subtle white glow. */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Adds a soft glow around the star. */
+}
+
+#info-box {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  color: #ffffff; /* White text colour */
+  padding: 15px;
+  border-radius: 8px;
+  display: none; /* Hide the box by default */
+  z-index: 100; /* Make sure it appears on the top of other elements */
+  max-width: 200px;
+}
+
+#info-box h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+#info-box p {
+ margin-bottom: 10px 0;
   font-size: 1rem;
 }
-
-/* Footer styles */
-footer {
-  text-align: center;
-  padding: 20px;
-  position: relative;
-
-}
-
-.footer-image {
-  width: 70%;
-  height: 500%;
-  max-height: 800px; /* Control the height to prevent scrolling */
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-}
-
-
