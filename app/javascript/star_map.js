@@ -1,5 +1,6 @@
-    // Handle star clicks
-    document.querySelectorAll('.star-betelgeuse, .star-rigel, .star-alnitak, .star-alnilam, .star-mintaka').forEach(star => {
+document.addEventListener('turbo:load', function() {
+   // Handle star clicks
+    document.querySelectorAll('.star-betelgeuse, .star-rigel, .star-alnitak, .star-alnilam, .star-mintaka, .star-orion_nebula').forEach(star => {
       star.addEventListener('click', function() {
         // Get star attributes
         const name = this.getAttribute('data-name');
@@ -36,5 +37,6 @@
         infoBox.style.display = 'block';
       });
     });
+  });
   
   

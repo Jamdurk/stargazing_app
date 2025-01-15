@@ -15,8 +15,7 @@
  */
 #sky-map {
   position: relative; /* Sets the parent element as a reference point for absolute child elements. */
-  width: 100%; /* Makes the container take up the full width of the screen. */
-  height: auto; /* Keeps the height proportional to the image’s natural dimensions. */
+  max-width: 10000px; /* Makes the container take up the full width of the screen. */
   overflow: hidden; /* Hides any content that overflows the container. */
 }
 
@@ -135,10 +134,10 @@ footer {
   margin: 0; /* Removes default margins. */
   padding: 0; /* Removes default padding. */
   position: absolute; /* Positions the star relative to the #sky-map container. */
-  top: 19.75%; /* Sets the vertical position of the star. */
-  left: 13.2%; /* Sets the horizontal position of the star. */
-  width: 20px; /* Sets the width of the clickable area. */
-  height: 20px; /* Sets the height of the clickable area. */
+  top: 19.9%; /* Sets the vertical position of the star. */
+  left: 13.30%; /* Sets the horizontal position of the star. */
+  width: 30px; /* Sets the width of the clickable area. */
+  height: 30px; /* Sets the height of the clickable area. */
   border-radius: 50%; /* Makes the clickable area a perfect circle. */
   cursor: pointer; /* Changes the mouse pointer to a hand when hovering over the star. */
   background-color: transparent; /* Makes the clickable area invisible. */
@@ -154,10 +153,10 @@ footer {
   margin: 0; /* Removes default margins. */
   padding: 0; /* Removes default padding. */
   position: absolute; /* Positions the star relative to the #sky-map container. */
-  top: 79.95%; /* Sets the vertical position of the star. */
-  left: 73.1%; /* Sets the horizontal position of the star. */
-  width: 20px; /* Sets the width of the clickable area. */
-  height: 20px; /* Sets the height of the clickable area. */
+  top: 80.06%; /* Sets the vertical position of the star. */
+  left: 73.14%; /* Sets the horizontal position of the star. */
+  width: 39px; /* Sets the width of the clickable area. */
+  height: 39px; /* Sets the height of the clickable area. */
   border-radius: 50%; /* Makes the clickable area a perfect circle. */
   cursor: pointer; /* Changes the mouse pointer to a hand when hovering over the star. */
   background-color: transparent; /* Makes the clickable area invisible. */
@@ -169,10 +168,10 @@ footer {
   margin: 0; /* Removes default margins. */
   padding: 0; /* Removes default padding. */
   position: absolute; /* Positions the star relative to the #sky-map container. */
-  top: 55.8%; /* Sets the vertical position of the star. */
-  left: 34.9%; /* Sets the horizontal position of the star. */
-  width: 20px; /* Sets the width of the clickable area. */
-  height: 20px; /* Sets the height of the clickable area. */
+  top: 55.90%; /* Sets the vertical position of the star. */
+  left: 35.20%; /* Sets the horizontal position of the star. */
+  width: 30px; /* Sets the width of the clickable area. */
+  height: 30px; /* Sets the height of the clickable area. */
   border-radius: 50%; /* Makes the clickable area a perfect circle. */
   cursor: pointer; /* Changes the mouse pointer to a hand when hovering over the star. */
   background-color: transparent; /* Makes the clickable area invisible. */
@@ -184,10 +183,10 @@ footer {
   margin: 0; /* Removes default margins. */
   padding: 0; /* Removes default padding. */
   position: absolute; /* Positions the star relative to the #sky-map container. */
-  top: 53.12%; /* Sets the vertical position of the star. */
-  left: 41.8%; /* Sets the horizontal position of the star. */
-  width: 20px; /* Sets the width of the clickable area. */
-  height: 20px; /* Sets the height of the clickable area. */
+  top: 53.09%; /* Sets the vertical position of the star. */
+  left: 41.77%; /* Sets the horizontal position of the star. */
+  width: 29px; /* Sets the width of the clickable area. */
+  height: 29px; /* Sets the height of the clickable area. */
   border-radius: 50%; /* Makes the clickable area a perfect circle. */
   cursor: pointer; /* Changes the mouse pointer to a hand when hovering over the star. */
   background-color: transparent; /* Makes the clickable area invisible. */
@@ -201,14 +200,33 @@ footer {
   position: absolute; /* Positions the star relative to the #sky-map container. */
   top: 49.7%; /* Adjust this to plot accurately */
   left: 47.8%; /* Adjust this to plot accurately */
-  width: 20px; /* Sets the width of the clickable area. */
-  height: 20px; /* Sets the height of the clickable area. */
+  width: 29px; /* Sets the width of the clickable area. */
+  height: 29px; /* Sets the height of the clickable area. */
   border-radius: 50%; /* Makes the clickable area a perfect circle. */
   cursor: pointer; /* Changes the mouse pointer to a hand when hovering over the star. */
   background-color: transparent; /* Makes the clickable area invisible. */
   border: 2px solid transparent; /* Adds an invisible border for the hover effect. */
   transition: all 0.3s ease; /* Smoothly transitions hover effects. */
 }
+
+.star-orion_nebula {
+  margin: 0; /* Removes default margins. */
+  padding: 0; /* Removes default padding. */
+  position: absolute; /* Positions the star relative to the #sky-map container. */
+  top: 65.5%; /* Adjust this */
+  left: 38.7%; /* Adjust this */
+  width: 350px; /* Sets the width of the clickable area. */
+  height: 350px; /* Sets the height of the clickable area. */
+  border-radius: 50%; /* Makes the clickable area a perfect circle. */
+  cursor: pointer; /* Changes the mouse pointer to a hand when hovering over the star. */
+  background-color: transparent; /* Makes the clickable area invisible. */
+  border: 2px solid transparent; /* Adds an invisible border for the hover effect. */
+  transition: all 0.3s ease; /* Smoothly transitions hover effects. */
+}
+
+
+
+
 
 
 /* 
@@ -219,7 +237,8 @@ footer {
 .star-rigel:hover,
 .star-alnitak:hover,
 .star-alnilam:hover,
-.star-mintaka:hover {
+.star-mintaka:hover,
+.star-orion_nebula:hover {
   border-color: rgba(255, 255, 255, 0.7); /* Changes the border color to a subtle white glow. */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Adds a soft glow around the star. */
 }
@@ -243,4 +262,36 @@ footer {
 #info-box p {
  margin-bottom: 10px 0;
   font-size: 1rem;
+}
+
+/* About Page Styles */
+#about-page {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  background-color: #1C1F4F;
+  padding: 40px;
+}
+
+.section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  color: #FFD700;
+  margin-bottom: 15px;
+}
+
+.section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Optional Hover Effect for Headings */
+.section h2:hover {
+  text-shadow: 0 0 10px #FFD700;
 }
