@@ -1,38 +1,50 @@
-<h1>Add a New Star</h1>
+<div class="add-star-container">
+  <h1>Add a New Star</h1>
 
-<%= form_with model: @star, local: true do |form| %>
-  <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </p>
+  <% if @star.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@star.errors.count, "error") %> prohibited this star from being saved:</h2>
+      <ul>
+        <% @star.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-  <p>
-    <%= form.label :description %><br>
-    <%= form.text_area :description %>
-  </p>
+  <%= form_with model: @star, local: true do |form| %>
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
 
-  <p>
-    <%= form.label :distance %><br>
-    <%= form.text_field :distance %>
-  </p>
+    <div>
+      <%= form.label :description %>
+      <%= form.text_area :description %>
+    </div>
 
-  <p>
-    <%= form.label :lifespan %><br>
-    <%= form.text_field :lifespan %>
-  </p>
+    <div>
+      <%= form.label :distance %>
+      <%= form.text_field :distance %>
+    </div>
 
-  <p>
-    <%= form.label :fact %><br>
-    <%= form.text_area :fact %>
-  </p>
+    <div>
+      <%= form.label :lifespan %>
+      <%= form.text_field :lifespan %>
+    </div>
 
-  <p>
-    <%= form.label :size %><br>
-    <%= form.text_field :size %>
-  </p>
+    <div>
+      <%= form.label :fact %>
+      <%= form.text_area :fact %>
+    </div>
 
-  <p>
-    <%= form.submit %>
-  </p>
-  
-<% end %>
+    <div>
+      <%= form.label :size %>
+      <%= form.text_field :size %>
+    </div>
+
+    <div>
+      <%= form.submit "Create Star" %>
+    </div>
+  <% end %>
+</div>

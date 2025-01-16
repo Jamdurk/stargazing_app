@@ -241,7 +241,7 @@ footer {
 .star-alnitak:hover,
 .star-alnilam:hover,
 .star-mintaka:hover,
-.star-orion-nebula:hover {
+.star-orions-nebula:hover {
   border-color: rgba(255, 255, 255, 0.7); /* Changes the border color to a subtle white glow. */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Adds a soft glow around the star. */
 }
@@ -297,4 +297,68 @@ footer {
 /* Optional Hover Effect for Headings */
 .section h2:hover {
   text-shadow: 0 0 10px #FFD700;
+}
+
+/* Form Container */
+.add-star-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+.add-star-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #FFD700; /* Golden color */
+}
+
+/* Labels */
+.add-star-container label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #FFD700;
+}
+
+/* Inputs */
+.add-star-container input[type="text"],
+.add-star-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+}
+
+/* Input Focus */
+.add-star-container input[type="text"]:focus,
+.add-star-container textarea:focus {
+  border-color: #FFD700;
+  outline: none;
+}
+
+/* Submit Button */
+.add-star-container input[type="submit"] {
+  background-color: #FFD700;
+  color: #1C1F4F;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Submit Button Hover */
+.add-star-container input[type="submit"]:hover {
+  background-color: #FFC300;
 }
