@@ -1,9 +1,10 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+Star.create([
+    { name: "Betelgeuse", description: "A red supergiant star.", distance: "642.5 light-years away", lifespan: "10 million-year lifespan!", fact: "Betelgeuse is expected to go supernova in the next 100,000 years.", size: "887 times the size of Earth" },
+    { name: "Rigel", description: "A blue supergiant star.", distance: "860 light-years away", lifespan: "8 million-year lifespan!", fact: "Rigel is one of the brightest stars in our galaxy.", size: "78 times the size of Earth" },
+    { name: "Alnitak", description: "The leftmost star in Orion’s Belt with a brilliant blue glow.", distance: "736 light-years away", lifespan: "6 million-year lifespan!", fact: "Part of a triple star system.", size: "20 times the size of Earth" },
+    { name: "Alnilam", description: "The middle star in Orion’s Belt, surrounded by a glowing gas cloud.", distance: "1,344 light-years away", lifespan: "4 million-year lifespan!", fact: "One of the most luminous stars visible in the night sky.", size: "24 times the size of Earth" },
+    { name: "Mintaka", description: "The rightmost star in Orion’s Belt, emitting intense ultraviolet radiation.", distance: "916 light-years away", lifespan: "4 million-year lifespan!", fact: "Visible from all inhabited parts of Earth.", size: "16 times the size of Earth" },
+    { name: "Orions Nebula", description: "Orion’s Nebula is a massive star-forming region located below Orion’s Belt. It's one of the brightest nebulae visible to the naked eye.", distance: "1,344 light-years away.", lifespan: "The stars forming inside the nebula will live for millions to billions of years, depending on their size.", fact: "The Orion Nebula is a stellar nursery, where thousands of new stars are born, including protoplanetary disks — the building blocks of planets.", size: "17.8 BILLION times the size of Earth, wow!" }
+
+  ])
+  

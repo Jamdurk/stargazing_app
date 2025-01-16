@@ -16,7 +16,8 @@
 #sky-map {
   position: relative; /* Sets the parent element as a reference point for absolute child elements. */
   max-width: 10000px; /* Makes the container take up the full width of the screen. */
-  overflow: hidden; /* Hides any content that overflows the container. */
+  overflow: hidden;
+  height: auto; 
 }
 
 /* 
@@ -209,7 +210,7 @@ footer {
   transition: all 0.3s ease; /* Smoothly transitions hover effects. */
 }
 
-.star-orion_nebula {
+.star-orions-nebula {
   margin: 0; /* Removes default margins. */
   padding: 0; /* Removes default padding. */
   position: absolute; /* Positions the star relative to the #sky-map container. */
@@ -229,6 +230,8 @@ footer {
 
 
 
+
+
 /* 
  * Hover Effect for Betelgeuse and Rigel 
  * Adds a glowing effect when hovering over the clickable stars.
@@ -238,7 +241,7 @@ footer {
 .star-alnitak:hover,
 .star-alnilam:hover,
 .star-mintaka:hover,
-.star-orion_nebula:hover {
+.star-orion-nebula:hover {
   border-color: rgba(255, 255, 255, 0.7); /* Changes the border color to a subtle white glow. */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Adds a soft glow around the star. */
 }

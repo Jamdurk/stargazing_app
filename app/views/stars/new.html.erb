@@ -1,0 +1,38 @@
+<h1>Add a New Star</h1>
+
+<%= form_with model: @star, local: true do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+
+  <p>
+    <%= form.label :distance %><br>
+    <%= form.text_field :distance %>
+  </p>
+
+  <p>
+    <%= form.label :lifespan %><br>
+    <%= form.text_field :lifespan %>
+  </p>
+
+  <p>
+    <%= form.label :fact %><br>
+    <%= form.text_area :fact %>
+  </p>
+
+  <p>
+    <%= form.label :size %><br>
+    <%= form.text_field :size %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+  
+<% end %>
