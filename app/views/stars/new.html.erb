@@ -1,18 +1,18 @@
 <div class="add-star-container">
   <h1>Add a New Star</h1>
+<% if @star.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@star.errors.count, "error") %> prohibited this star from being saved:</h2>
+    <ul>
+      <% @star.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 
-  <% if @star.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@star.errors.count, "error") %> prohibited this star from being saved:</h2>
-      <ul>
-        <% @star.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+ <%= form_with model: @star, local: true, data: { turbo: false } do |form| %>
 
-  <%= form_with model: @star, local: true do |form| %>
     <div>
       <%= form.label :name %>
       <%= form.text_field :name %>

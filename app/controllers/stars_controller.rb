@@ -13,6 +13,7 @@ class StarsController < ApplicationController
           if @star.save
             redirect_to stars_path, notice: 'Star was successfully created.'
           else
+            puts @star.errors.full_messages.inspect
             render :new
           end
         end
