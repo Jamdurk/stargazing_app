@@ -1,6 +1,6 @@
 document.addEventListener('turbo:load', function() {
    // Handle star clicks
-    document.querySelectorAll('.star-betelgeuse, .star-rigel, .star-alnitak, .star-alnilam, .star-mintaka, .star-orions-nebula').forEach(star => {
+    document.querySelectorAll('.star-betelgeuse, .star-rigel, .star-alnitak, .star-alnilam, .star-mintaka, .star-orions-nebula, .star-saiph, .star-bellatrix').forEach(star => {
       star.addEventListener('click', function() {
         // Get star attributes
         const name = this.getAttribute('data-name');

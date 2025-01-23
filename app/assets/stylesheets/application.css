@@ -225,6 +225,36 @@ footer {
   transition: all 0.3s ease; /* Smoothly transitions hover effects. */
 }
 
+.star-saiph {
+  margin: 0; /* Removes default margins. */
+  padding: 0; /* Removes default padding. */
+  position: absolute; /* Positions the star relative to the #sky-map container. */
+  top: 86.04%; /* Adjust this */
+  left: 23.9%; /* Adjust this */
+  width: 35px; /* Sets the width of the clickable area. */
+  height: 35px; /* Sets the height of the clickable area. */
+  border-radius: 50%; /* Makes the clickable area a perfect circle. */
+  cursor: pointer; /* Changes the mouse pointer to a hand when hovering over the star. */
+  background-color: transparent; /* Makes the clickable area invisible. */
+  border: 2px solid transparent; /* Adds an invisible border for the hover effect. */
+  transition: all 0.3s ease; /* Smoothly transitions hover effects. */
+}
+
+.star-bellatrix {
+  margin: 0; /* Removes default margins. */
+  padding: 0; /* Removes default padding. */
+  position: absolute; /* Positions the star relative to the #sky-map container. */
+  top: 24.8%; /* Adjust this */
+  left: 57.50%; /* Adjust this */
+  width: 35px; /* Sets the width of the clickable area. */
+  height: 35px; /* Sets the height of the clickable area. */
+  border-radius: 50%; /* Makes the clickable area a perfect circle. */
+  cursor: pointer; /* Changes the mouse pointer to a hand when hovering over the star. */
+  background-color: transparent; /* Makes the clickable area invisible. */
+  border: 2px solid transparent; /* Adds an invisible border for the hover effect. */
+  transition: all 0.3s ease; /* Smoothly transitions hover effects. */
+}
+
 
 
 
@@ -241,7 +271,9 @@ footer {
 .star-alnitak:hover,
 .star-alnilam:hover,
 .star-mintaka:hover,
-.star-orions-nebula:hover {
+.star-orions-nebula:hover,
+.star-saiph:hover,
+.star-bellatrix:hover {
   border-color: rgba(255, 255, 255, 0.7); /* Changes the border color to a subtle white glow. */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Adds a soft glow around the star. */
 }

@@ -4,7 +4,7 @@
   <!-- Render stars dynamically from the database -->
   <% @stars.each do |star| %>
     <div class="star star-<%= star.name.parameterize %>"
-         data-description="<%= star.name %>"
+         data-name="<%= star.name %>"
          data-description="<%= star.description %>"
          data-distance="<%= star.distance %>"
          data-lifespan="<%= star.lifespan %>"
