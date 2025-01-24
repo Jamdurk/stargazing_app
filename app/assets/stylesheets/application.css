@@ -258,10 +258,6 @@ footer {
 
 
 
-
-
-
-
 /* 
  * Hover Effect for Betelgeuse and Rigel 
  * Adds a glowing effect when hovering over the clickable stars.
@@ -277,6 +273,10 @@ footer {
   border-color: rgba(255, 255, 255, 0.7); /* Changes the border color to a subtle white glow. */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Adds a soft glow around the star. */
 }
+
+
+
+
 
 #info-box {
   position: absolute;
